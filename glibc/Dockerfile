@@ -18,6 +18,8 @@ RUN set -x \
         /usr/share/zoneinfo \
         /etc/services \
         /lib/"$(gcc -print-multiarch)"/libpthread.so.* \
+        /usr/lib/os-release \
+        /etc/os-release \
     && while [ "$#" -gt 0  ]; do \
         f="$1"; shift; \
         fn="$(basename "$f")"; \

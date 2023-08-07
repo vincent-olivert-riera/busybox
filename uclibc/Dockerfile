@@ -17,6 +17,8 @@ RUN set -x \
         /etc/ssl/certs/ca-certificates.crt \
         /usr/share/zoneinfo \
         /etc/services \
+        /usr/lib/os-release \
+        /etc/os-release \
     && while [ "$#" -gt 0  ]; do \
         f="$1"; shift; \
         fn="$(basename "$f")"; \
